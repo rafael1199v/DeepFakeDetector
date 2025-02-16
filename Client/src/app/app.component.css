@@ -1,0 +1,22 @@
+  
+
+.body-page {
+    position: relative;
+    background-image: url("../assets/images/ia.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.overlay {
+    /* pointer-events: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   
+}
