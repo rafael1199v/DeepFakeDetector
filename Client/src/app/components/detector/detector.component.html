@@ -1,1 +1,8 @@
-<p>detector works!</p>
+<h1>Detectar Deepfake</h1>
+
+<form enctype="multipart/form-data" [formGroup]="imageForm">
+    <p> Enter Image Url </p>
+    <input name="Image" type="file" formControlName="image">
+    <label>Enter image</label>
+    <button type="submit" (click)="classifyImage()"> Predict Image </button>
+</form>

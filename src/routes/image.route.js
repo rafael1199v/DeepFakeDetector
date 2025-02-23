@@ -10,11 +10,11 @@ router.get('/', controller.home);
 
 router.get('/img', controller.homeImage);
 
-router.post('/classify/url', 
+router.post('/api/classify/url', 
             bodyParser.raw({ type: ["image/jpg"], limit: "5mb" }),
             controller.classifyImageByUrl);
 
-router.post('/classify/image',
+router.post('/api/classify/image',
             upload.single('Image'),
             controller.classifyImage);
 
