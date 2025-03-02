@@ -11,10 +11,15 @@ async function classifyImageByUrl(req, res) {
 async function classifyImage(req, res) {
 
     //console.log(req.file);
+    // console.log('Recibimos una imagen');
+    // console.log(req.file);
+
     const bufferData = req.file.buffer;
     const contentTypes = req.file.mimetype;
-    
+
     const result = await imageService.classifyImage(bufferData, contentTypes);
+
+    //console.log(result);
     return res.json(result);
 }
 
