@@ -20,15 +20,63 @@ h1 {
 .main-answer {
     background-color: #f4f4f4;
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    
+}
+
+.main-answer section {
+    width: 30rem;
+    text-align: center;
+}
+
+.main-answer section p {
+    font-family: sans-serif;
 }
 
 .sections {
     display: flex;
     justify-content: center;
-    gap: 20rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .img-sec {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+    height: auto;
+    margin: 0 2rem 0 2rem;
+}
+
+.section-point {
+    /* border: solid 1px black; */
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.section-point-content {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 35rem;
+}
+
+#section-point-content-first{
+    order: 2;
+}
+
+#section-point-content-third {
+    order: 2;
+}
+
+.section-point-content h2 {
+    font-size: 2.5rem;
+}
+
+.section-point-content p {
+    font-size: 1.3rem;
+    text-align: left;
+    font-family: sans-serif;
 }

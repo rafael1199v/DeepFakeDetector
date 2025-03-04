@@ -4,3 +4,4 @@ tm-my-image-model.zip
 .vscode/settings.json
 ClientApp/src/environments/environment.development.ts
 ClientApp/src/environments/environment.ts
+ClientApp/.vscode/settings.json
