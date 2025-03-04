@@ -1,0 +1,12 @@
+.quiz-button {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    align-items: center;
+}
+
+button {
+    height: 5.5rem;
+    width: 9rem;
+}
+

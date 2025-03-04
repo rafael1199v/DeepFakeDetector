@@ -1,0 +1,14 @@
+<div class="quiz-button" [hidden]="play">
+    <button type="button" (click)="playQuiz()" [hidden]="play">Quiz</button>
+</div>
+
+
+@if(play) {
+    @for(question of quiz?.questions; track question) {
+        <h3>{{ question.question }}</h3>
+    }
+}
+
+
+
+

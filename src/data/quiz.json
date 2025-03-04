@@ -1,0 +1,152 @@
+{
+    "questions": [
+      {
+        "question": "¿Qué es un deepfake?",
+        "options": [
+          {
+            "answer": "Un video o imagen manipulada usando inteligencia artificial.",
+            "correct": true
+          },
+          {
+            "answer": "Un tipo de virus informático.",
+            "correct": false
+          },
+          {
+            "answer": "Una herramienta para crear gráficos animados.",
+            "correct": false
+          },
+          {
+            "answer": "Una técnica de edición de video tradicional.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "¿Qué tecnología es comúnmente utilizada para crear deepfakes?",
+        "options": [
+          {
+            "answer": "Redes Neuronales Generativas Antagónicas (GANs).",
+            "correct": true
+          },
+          {
+            "answer": "Algoritmos de compresión de video.",
+            "correct": false
+          },
+          {
+            "answer": "Edición de imágenes en 3D.",
+            "correct": false
+          },
+          {
+            "answer": "Sistemas de reconocimiento facial.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "¿Cuál es uno de los mayores riesgos asociados a los deepfakes?",
+        "options": [
+          {
+            "answer": "Pueden utilizarse para difundir desinformación.",
+            "correct": true
+          },
+          {
+            "answer": "Solo afectan a la calidad de las imágenes.",
+            "correct": false
+          },
+          {
+            "answer": "Son herramientas útiles para mejorar el cine.",
+            "correct": false
+          },
+          {
+            "answer": "No tienen ningún impacto negativo.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "¿Cómo pueden los deepfakes afectar la política?",
+        "options": [
+          {
+            "answer": "Pueden ser utilizados para crear videos falsos de políticos.",
+            "correct": true
+          },
+          {
+            "answer": "Ayudan a mejorar la percepción de los líderes políticos.",
+            "correct": false
+          },
+          {
+            "answer": "Son solo una forma de entretenimiento.",
+            "correct": false
+          },
+          {
+            "answer": "No tienen impacto en el ámbito político.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "¿Qué medida se está tomando para combatir los deepfakes?",
+        "options": [
+          {
+            "answer": "Desarrollar herramientas de detección de deepfakes.",
+            "correct": false
+          },
+          {
+            "answer": "Crear leyes que prohíban la creación de deepfakes.",
+            "correct": false
+          },
+          {
+            "answer": "Educar a la gente para reconocer los deepfakes.",
+            "correct": false
+          },
+          {
+            "answer": "Todas las anteriores.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "question": "¿Qué tipo de datos son generalmente necesarios para crear un deepfake?",
+        "options": [
+          {
+            "answer": "Imágenes y videos de la persona a imitar.",
+            "correct": true
+          },
+          {
+            "answer": "Solo una foto de la persona.",
+            "correct": false
+          },
+          {
+            "answer": "Una grabación de voz.",
+            "correct": false
+          },
+          {
+            "answer": "Datos de redes sociales de la persona.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question": "¿Cuál es una de las principales preocupaciones éticas de los deepfakes?",
+        "options": [
+          {
+            "answer": "Que puedan ser utilizados para el fraude y la suplantación de identidad.",
+            "correct": true
+          },
+          {
+            "answer": "Que destruyan las imágenes en alta resolución.",
+            "correct": false
+          },
+          {
+            "answer": "Que no se puedan crear videos en tiempo real.",
+            "correct": false
+          },
+          {
+            "answer": "Que sean demasiado fáciles de detectar.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+  

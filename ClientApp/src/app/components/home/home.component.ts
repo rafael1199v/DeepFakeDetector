@@ -14,7 +14,7 @@ export class HomeComponent {
   constructor(private router: Router){}
   
   goToQuizz() : void {
-    this.router.navigate(['/information']);
+    this.router.navigate(['/quiz']);
   }
 
   goToDetector() : void {

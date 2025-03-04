@@ -2,36 +2,39 @@ const imageService = require('../services/image.service');
 
 async function classifyImageByUrl(req, res) {
 
-    const url = req.body.ImageUrl;
-    const result = await imageService.classifyByUrl(url);
+    try {
+        const url = req.body.ImageUrl;
+        const result = await imageService.classifyByUrl(url);
 
-    return res.json(result);
+        return res.json(result);
+    }   
+    catch(error) {
+        res.status(500).json({ mesagge: `Error al clasificar la imagen. ${error}` });
+    }
+    
 }
 
 async function classifyImage(req, res) {
 
-    // console.log(req.file);
-    // console.log('Recibimos una imagen');
 
-    // console.log('Tamaño del buffer:', req.file.buffer.length);
-    // console.log('Tamaño del archivo:', req.file.size);
+    try {
+        const bufferData = req.file.buffer;
+        const contentTypes = req.file.mimetype;
 
-    const bufferData = req.file.buffer;
-    const contentTypes = req.file.mimetype;
+        const base64Image = bufferData.toString('base64');
+        const imageUrl = `data:${contentTypes};base64,${base64Image}`;
 
-    const base64Image = bufferData.toString('base64');
-    const imageUrl = `data:${contentTypes};base64,${base64Image}`;
+        const result = await imageService.classifyByUrl(imageUrl);
 
-    //console.log(imageUrl.substring(0, 100));
-
-    const result = await imageService.classifyByUrl(imageUrl);
-
-    //console.log(result);
-
-    return res.json({
-        classificationResult: result,
-        imageUrl: imageUrl
-    });
+        return res.json({
+            classificationResult: result,
+            imageUrl: imageUrl
+        });
+    }
+    catch(error) {
+        return res.status(500).json({ message: `Error al clasificar la imagen. ${error}` });
+    }
+    
 }
 
 

@@ -7,7 +7,7 @@ import { WebSnapshotComponent } from '../web-snapshot/web-snapshot.component';
 @Component({
   selector: 'app-detector',
   standalone: true,
-  imports: [ReactiveFormsModule, WebSnapshotComponent],
+  imports: [ReactiveFormsModule],
   providers: [ImageService],
   templateUrl: './detector.component.html',
   styleUrl: './detector.component.css'
