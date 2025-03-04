@@ -1,3 +1,6 @@
 node_modules
 DataSet
 tm-my-image-model.zip
+.vscode/settings.json
+ClientApp/src/environments/environment.development.ts
+ClientApp/src/environments/environment.ts
