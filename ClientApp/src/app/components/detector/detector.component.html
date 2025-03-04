@@ -1,0 +1,32 @@
+<h1>Detectar Deepfake</h1>
+<!-- 
+<app-web-snapshot></app-web-snapshot> -->
+
+<form enctype="multipart/form-data" (submit)="classifyImage($event)">
+    <p> Enter Image  </p>
+    <input name="Image" type="file" (change)="onFileSelected($event)">
+    <label>Enter image</label>
+    <button type="submit"> Predict Image </button>
+</form>
+
+@if(existsResult)
+{
+
+    
+    <div class="result">
+        <img [src]="resultClassification.imageUrl" class="fit">
+        <h2>Resultados</h2>
+        
+        <div>
+            <h3>{{ resultClassification.classificationResult[0].class }}</h3>
+            <p> {{ resultClassification.classificationResult[0].score }}</p>
+        </div>
+
+        <div>
+            <h3> {{  resultClassification.classificationResult[1].class }}</h3>
+            <p> {{ resultClassification.classificationResult[1].score }}</p>
+        </div>
+
+    </div>
+}
+

@@ -1,0 +1,8 @@
+
+<button (click)="enableCamera()">Usar Camara</button>
+@if(cameraAvailable) {
+    <webcam [width]="500" [height]="400" [trigger]="$trigger" (imageCapture)="snapshot($event)"></webcam>
+    <button (click)="capture()">Capturar</button>
+}
+
+
