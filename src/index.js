@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes/image.route');
 const cors = require('cors');
-
+const imageRoutes = require('./routes/image.route');
+const quizRoutes = require('./routes/quiz.route');
 
 const PORT = process.env.PORT || 3000;
 //const localIP = '';
@@ -13,7 +13,8 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', routes);
+app.use('/', imageRoutes.router);
+app.use('/', quizRoutes.router);
 
 //Phones available
 // app.listen(PORT, localIP, () => {

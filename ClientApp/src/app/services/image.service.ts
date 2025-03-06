@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class ImageService {
 
-  url: string = environment.API_URL_NET + '/classify';
+  url: string = environment.API_URL + '/classify';
   constructor(private http: HttpClient) { }
 
   classifyImage(imageBuffer: FormData) : Observable<any> {

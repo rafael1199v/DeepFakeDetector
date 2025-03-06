@@ -9,7 +9,7 @@ async function classifyImageByUrl(req, res) {
         return res.json(result);
     }   
     catch(error) {
-        res.status(500).json({ mesagge: `Error al clasificar la imagen. ${error}` });
+        res.status(500).json({ mesagge: `Error al clasificar la imagen. ${error.error}` });
     }
     
 }
@@ -32,7 +32,7 @@ async function classifyImage(req, res) {
         });
     }
     catch(error) {
-        return res.status(500).json({ message: `Error al clasificar la imagen. ${error}` });
+        return res.status(500).json({ message: `Error al clasificar la imagen. ${error.error}` });
     }
     
 }

@@ -10,7 +10,7 @@ async function classifyImage(imageBuffer, contentTypes) {
         return predictions;
     })
     .catch((error) => {
-        console.log(error);
+       return Promise.reject(error)
     });
 }
 
@@ -23,7 +23,7 @@ async function classifyByUrl(imageURL) {
         return predictions;
     })
     .catch((error) => {
-        console.log(error);
+        return Promise.reject(error);
     })
 }
 
