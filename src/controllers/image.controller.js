@@ -24,7 +24,7 @@ async function classifyImage(req, res) {
         const base64Image = bufferData.toString('base64');
         const imageUrl = `data:${contentTypes};base64,${base64Image}`;
 
-        const result = await imageService.classifyByUrl(imageUrl);
+        const result = await imageService.classifyImage(bufferData, contentTypes);
 
         return res.json({
             classificationResult: result,
