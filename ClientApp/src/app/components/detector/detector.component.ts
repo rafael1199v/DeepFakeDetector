@@ -35,7 +35,8 @@ export class DetectorComponent implements AfterViewInit{
 
   classifyImage(event: Event) : void {
     event.preventDefault();
-
+  
+    
     if(!this.selectedFile)
       return;
     

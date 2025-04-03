@@ -1,34 +1,74 @@
-<h1>Detectar Deepfake</h1>
-<!-- 
-<app-web-snapshot></app-web-snapshot> -->
+<div class="container">
+    <div class="card">
+      <h1 class="title">Detectar Deepfake</h1>
 
-<form enctype="multipart/form-data" (submit)="classifyImage($event)">
-    <p> Enter Image  </p>
-    <input name="Image" type="file" (change)="onFileSelected($event)">
-    <label>Enter image</label>
-    <button type="submit"> Predict Image </button>
-</form>
-
-@if(existsResult)
-{
-
-    
-    <div class="result">
-        <img [src]="resultClassification.imageUrl" class="fit">
-        <h2>Resultados</h2>
+      <form (ngSubmit)="classifyImage($event)" class="upload-form" type="post">
+        <div class="file-input-group">
+          <label for="imageUpload" class="file-label">
+            Seleccionar Imagen
+          </label>
+          <input 
+            id="imageUpload"
+            type="file" 
+            (change)="onFileSelected($event)"
+            class="file-input"
+          >
+        </div>
         
-        <div>
-            <h3>{{ resultClassification.classificationResult[0].class }}</h3>
-            <p> {{ resultClassification.classificationResult[0].score }}</p>
+        <div class="submit-container">
+          <button 
+            type="submit" 
+            [disabled]="!selectedFile"
+            class="submit-button"
+            (click)="classifyImage($event)"
+          >
+            Analizar Imagen
+          </button>
         </div>
+      </form>
 
-        <div>
-            <h3> {{  resultClassification.classificationResult[1].class }}</h3>
-            <p> {{ resultClassification.classificationResult[1].score }}</p>
+      @if(existsResult) {
+        <div class="result-section">
+          <div class="result-grid">
+            <div class="image-container">
+              <img 
+                [src]="resultClassification.imageUrl" 
+                alt="Imagen analizada"
+                class="result-image"
+              >
+            </div>
+
+            <div class="classification-container">
+              <h2 class="result-title">Resultados del Análisis</h2>
+
+              <div class="classification-results">
+                @for (result of resultClassification.classificationResult; track $index) {
+                  <div class="result-item">
+                    <div class="result-header">
+                      <h3 class="result-class">{{ result.class }}</h3>
+                      <span class="result-percentage">
+                        {{ (result.score * 100).toFixed(2) }}%
+                      </span>
+                    </div>
+                    <div class="progress-bar">
+                      <div 
+                        class="progress-bar-fill" 
+                        [style.width.%]="result.score * 100"
+                      ></div>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <app-donut-chart 
+              [fakePercentage]="charClassification[0].score" 
+              [realPercentage]="charClassification[1].score"
+            ></app-donut-chart>
+          </div>
         </div>
-
+      }
     </div>
-
-    <app-donut-chart [fakePercentage]="charClassification[0].score" [realPercentage]="charClassification[1].score"></app-donut-chart>
-}
-
+  </div>
