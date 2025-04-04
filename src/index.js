@@ -5,7 +5,6 @@ const imageRoutes = require('./routes/image.route');
 const quizRoutes = require('./routes/quiz.route');
 
 const PORT = process.env.PORT || 3000;
-//const localIP = '';
 
 app.use(cors());
 
@@ -17,14 +16,14 @@ app.use('/', imageRoutes.router);
 app.use('/', quizRoutes.router);
 
 //Phones available
-// app.listen(PORT, localIP, () => {
-//     console.log(`Example app listening at http://${localIP}:${PORT}`);
-// });
+app.listen(PORT, localIP, () => {
+    console.log(`Example app listening at http://${localIP}:${PORT}`);
+});
 
 
 //Local computer
-app.listen(PORT, () => {
-    console.log(`Example app listening at http://localhost:${PORT}`);
-})
+// app.listen(PORT, () => {
+//     console.log(`Example app listening at http://localhost:${PORT}`);
+// })
 
 
